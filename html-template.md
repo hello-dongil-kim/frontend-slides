@@ -12,26 +12,51 @@ Reference architecture for generating slide presentations. Every presentation fo
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Presentation Title</title>
 
-    <!-- Fonts: use Fontshare or Google Fonts — never system fonts -->
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=..." />
+    <!-- Fonts: Pretendard (Basic) or NanumSquare Neo (Brand) — see STYLE_PRESETS.md -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <!-- Brand 프리셋 사용 시: <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css" /> -->
 
     <style>
       /* ===========================================
-           CSS CUSTOM PROPERTIES (THEME)
-           Change these to change the whole look
+           CSS CUSTOM PROPERTIES (NCC THEME)
+           Change these to change the whole look.
+           See STYLE_PRESETS.md for all 12 NCC presets.
            =========================================== */
       :root {
-        /* Colors — from chosen style preset */
-        --bg-primary: #0a0f1c;
-        --bg-secondary: #111827;
-        --text-primary: #ffffff;
-        --text-secondary: #9ca3af;
-        --accent: #00ffcc;
-        --accent-glow: rgba(0, 255, 204, 0.3);
+        /* 배경 계층 — base → default → raised (그림자 금지) */
+        --bg-base: #F0F0F0;
+        --bg-default: #FFFFFF;
+        --bg-raised: #F8F9FA;
+        --bg-inverted: #1C1C1C;
 
-        /* Typography — MUST use clamp() */
-        --font-display: "Clash Display", sans-serif;
-        --font-body: "Satoshi", sans-serif;
+        /* 텍스트 계층 */
+        --fg-default: #000000;
+        --fg-subtle-1: #2E2E2E;
+        --fg-subtle-2: #424242;
+        --fg-decorative: #A3A3A3;
+        --fg-inverted: #FFFFFF;
+
+        /* Primary — NAVER Green (UI / Decorative 분리) */
+        --primary-default: #03A94D;
+        --primary-decorative: #03C75A;
+        --primary-subtle: #E6F9EE;
+
+        /* Secondary — Blue */
+        --secondary-default: #3283FD;
+        --link-mobile: #0068C3;
+
+        /* 선 — Inside만 사용 */
+        --stroke-subtle: rgba(0,0,0,0.10);
+        --stroke-divider: rgba(0,0,0,0.08);
+
+        /* Radius */
+        --r-s: 8px;
+        --r-m: 12px;
+        --r-full: 999px;
+
+        /* Typography — Pretendard (Basic) / NanumSquare Neo (Brand) */
+        --font-display: "Pretendard", system-ui, sans-serif;
+        --font-body: "Pretendard", system-ui, sans-serif;
         --title-size: clamp(2rem, 6vw, 5rem);
         --subtitle-size: clamp(0.875rem, 2vw, 1.25rem);
         --body-size: clamp(0.75rem, 1.2vw, 1rem);
@@ -44,6 +69,8 @@ Reference architecture for generating slide presentations. Every presentation fo
         --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
         --duration-normal: 0.6s;
       }
+
+      html { letter-spacing: -0.3px; /* NCC 공통 — 예외 없음 */ }
 
       /* ===========================================
            BASE STYLES

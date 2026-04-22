@@ -151,12 +151,12 @@ What feeling should the audience have? Options:
 
 Based on mood, generate 3 distinct single-slide HTML previews showing typography, colors, animation, and overall aesthetic. Read [STYLE_PRESETS.md](STYLE_PRESETS.md) for available presets and their specifications.
 
-| Mood                | Suggested Presets                                  |
-| ------------------- | -------------------------------------------------- |
-| Impressed/Confident | Bold Signal, Electric Studio, Dark Botanical       |
-| Excited/Energized   | Creative Voltage, Neon Cyber, Split Pastel         |
-| Calm/Focused        | Notebook Tabs, Paper & Ink, Swiss Modern           |
-| Inspired/Moved      | Dark Botanical, Vintage Editorial, Pastel Geometry |
+| Mood                | Suggested Presets                                          |
+| ------------------- | ---------------------------------------------------------- |
+| Impressed/Confident | NCC Dark Hero, NCC Base Card, NCC Status Grid              |
+| Excited/Energized   | NCC Brand Event, NCC Brand Hero, NCC Dark Split            |
+| Calm/Focused        | NCC Minimal, NCC Divider, NCC Editorial                    |
+| Inspired/Moved      | NCC Dark Hero, NCC Editorial, NCC Brand Hero               |
 
 Save previews to `.claude-design/slide-previews/` (style-a.html, style-b.html, style-c.html). Each should be self-contained, ~50-100 lines, showing one animated title slide.
 
